@@ -96,10 +96,10 @@
       };
 
       //YOUR TURN: add your Mapbox access token
-      mapboxgl.accessToken = '<pk.eyJ1IjoibWFwcGxlZ2EiLCJhIjoiY2lqbzk3aGVlMDB0bHRvbTVvNXB1azZxdyJ9.PpTLv2su5er4AqXhF-LK4A>';
+      mapboxgl.accessToken = 'pk.eyJ1IjoibWFwcGxlZ2EiLCJhIjoiY2lqbzk3aGVlMDB0bHRvbTVvNXB1azZxdyJ9.PpTLv2su5er4AqXhF-LK4A';
       var map = new mapboxgl.Map({
         container: 'map', // container id
-        style: "<mapbox://styles/mapbox/streets-v11>", //YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
+        style: "mapbox://styles/mapbox/streets-v11", //YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
         center: [-122.411464, 37.7852299], // starting position [lng, lat]
         zoom: 9, // starting zoom
         transformRequest: transformRequest
@@ -114,7 +114,7 @@
       function init() {
         Tabletop.init({
           // YOUR TURN: change 'key' value to point to your spreadsheet
-          key: '<https://docs.google.com/spreadsheets/d/1xO-b2sOWlO6ipEXmooSKLzmE9fQLDPYUIUs6qvH-L1c/edit?usp=sharing>',
+          key: 'https://docs.google.com/spreadsheets/d/1xO-b2sOWlO6ipEXmooSKLzmE9fQLDPYUIUs6qvH-L1c/edit?usp=sharing',
           // once Tabletop has loaded the data, it passes it to the 'callback' function, 'addPoints', defined below
           callback: addPoints,
           simpleSheet: true
@@ -139,7 +139,7 @@
               color: 'purple'
             })
             .setLngLat([row.Longitude, row.Latitude])
-            .backgroundImage('url(Food.png')
+            //.backgroundImage('url(Food.png')
             .setPopup(popup)
             .addTo(map); // add the marker to the map
 
